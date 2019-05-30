@@ -1,0 +1,42 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: #E8E9F3;
+}
+
+.bg-pastel-blue {
+	background-color: #A7CECB;
+}
+
+.logo-scooter {
+	height: 40px;
+	width: 240px;
+
+a:hover, a:active {
+  background-color: red;
+}
+
+}
+
+.navtitle {
+	font-size:16px;
+}
+
+.catalog-img {
+	width: 30%;
+
+}
+
+.txt-grey {
+	color: #88888B;
+}
+
+.table-white {
+	background-color: #fff;
+
+}
