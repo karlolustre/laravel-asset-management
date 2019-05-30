@@ -42,7 +42,7 @@
 
                     			{{-- <input type="text" value="{{$item->id}}"> --}}
                    				
-                   				<input type="number" min="1" max={{$item}} value="{{ $item->quantity }}" name="quantity" class="text-center  cart-qty" id="quantity{{$item->id}}">
+                   				<input type="number" min="1" max="{{$item->quantity}}" value="{{ $item->quantity }}" name="quantity" class="text-center  cart-qty" id="quantity{{$item->id}}">
                    				 
                    				 <div class="input-group-append"> 
                      				 <button type="button" class="btn btn-dark"" onclick="plus({{ $item->id}})">+</button>
@@ -199,7 +199,11 @@
 		$value = $("#quantity" +id).val();
 		$value = parseInt($value);
 
+		// if($value < max){
 		$("#quantity" +id).val($value + 1);
+
+		// }
+
 
 		$('#update_quantity' +id).attr('action', '/mycart/' + id + '/changeQty');
 

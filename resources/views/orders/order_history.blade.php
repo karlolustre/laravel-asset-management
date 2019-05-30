@@ -10,7 +10,7 @@
 			</div>
 		@endif
 				
-		<div class="row">
+		<div class="row mt-5">
 			<div class="col-md-10 mx-auto">
 				<table class="table table-hover table-white shadow">
 					<thead>

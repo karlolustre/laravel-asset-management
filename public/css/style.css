@@ -49,6 +49,7 @@ body {
 	margin: 0;
 	padding: 0;
 	background-attachment: fixed;
+	overflow: hidden;
 
  }
 
@@ -64,10 +65,11 @@ body {
 	margin: 0;
 	padding: 0;
 	background-attachment: fixed;
+	overflow: hidden;
 }
 
 .login-center {
-	margin-top: 10rem;
+	margin-top: 5rem;
 	opacity: .8;
 }
 
