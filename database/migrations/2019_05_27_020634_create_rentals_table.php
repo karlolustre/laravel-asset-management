@@ -16,6 +16,7 @@ class CreateRentalsTable extends Migration
         Schema::create('rentals', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+             $table->softDeletes();
         });
     }
 
