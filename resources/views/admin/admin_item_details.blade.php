@@ -62,7 +62,7 @@
 
 				  			<div class="form-group">
 				  				<label for="quantity">Quantity</label>
-				  				<input type="number" name="quantity" id="quantity" class="form-control" value="{{$item->quantity}}">
+				  				<input type="number" name="quantity" min="1" id="quantity" class="form-control" value="{{$item->quantity}}">
 				  			</div>
 
 				  			<div class="form-group">

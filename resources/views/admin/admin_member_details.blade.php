@@ -146,3 +146,10 @@
 
 
 @endsection
+
+<script>
+	function openDeleteModal(id, name) {
+		$('#deleteForm').attr('action', '/mycart/' + id + '/delete');
+		$('#delete_question').html("Do you want to delete " + name + "?");
+	}
+</script>
