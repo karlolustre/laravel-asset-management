@@ -114,8 +114,8 @@ class ItemController extends Controller
               'payment_method_types' => ['card'],
               'customer_email' => $user->email,
               'line_items' => $line_items,
-              'success_url' => 'http://localhost:8000/transaction_complete',
-              'cancel_url' => 'http://localhost:8000/menu/mycart',
+              'success_url' => 'https://scootanywhere.herokuapp.com/transaction_complete',
+              'cancel_url' => 'https://scootanywhere.herokuapp.com/menu/mycart',
             ]);
 
             $CHECKOUT_SESSION_ID = $stripe_session['id'];
