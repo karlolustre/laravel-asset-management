@@ -14,9 +14,9 @@ class UpdateUsersAdminDefault extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string('address')->nullable()->change();
-            $table->unsignedBigInteger('phone')->nullable()->change();
-            $table->string('gender')->nullable()->change();
+            $table->string('address')->nullable();
+            $table->unsignedBigInteger('phone')->nullable();
+            $table->string('gender')->nullable();
             $table->boolean('admin')->default(0)->change();
         });
     }
