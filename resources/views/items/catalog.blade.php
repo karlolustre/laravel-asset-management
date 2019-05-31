@@ -2,27 +2,35 @@
 
 @section('content')
 
-<p>@if(Session::has('success_message'))
-			<div class="alert alert-success">
-				{{ Session::get('success_message') }}
-			</div>
-			
-		@endif
-</p>
 <div class="container">
-		<div class="row">
-			<div class="col-md-4 mx-auto mb-5">
-				<a href="/menu/catalog" class="btn btn-outline-secondary">All</a>
-					@foreach(\App\Category::all() as $category)
-						<a href="/menu/categories/{{$category->id}}" class="btn btn-outline-secondary btn-primary">{{$category->name}}
-						</a>
-					@endforeach
-			</div>
+	<div class="row mt-4">
+		<div class="col-md-4 mx-auto mb-5">
+			<a href="/menu/catalog" class="btn btn-outline-secondary">All</a>
+			@foreach(\App\Category::all() as $category)
+				<a href="/menu/categories/{{$category->id}}" class="btn btn-outline-secondary btn-primary">{{$category->name}}
+				</a>
+			@endforeach
 		</div>
+	</div>
+</div>
+
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			@if(Session::has('success_message'))
+				<div class="alert alert-success text-center">
+					{{ Session::get('success_message') }}
+				</div>
+			@elseif(Session::has('message'))
+				<div class="alert alert-danger text-center">
+					{{ Session::get('message') }}
+				</div>
+			@endif
+		</div>
+	</div>
 
 	<div class="row">
-
-		
 		@foreach($items as $item)
 		<div class="col-md-6">
 			<div class="card text-center shadow-sm catalog-card mb-5 height-card">	
@@ -41,7 +49,7 @@
 		    	@endauth
 		    	</div>
 		    	<div class="card-footer">
-		    		<p><small class="text-muted">{{$item->category->name}}</small></p>
+		    		<p><small class="text-muted color-footer">{{$item->category->name}}</small></p>
 		    	</div>
 			</div>
 		</div>

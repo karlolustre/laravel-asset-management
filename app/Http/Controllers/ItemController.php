@@ -49,6 +49,7 @@ class ItemController extends Controller
     	} else {
     		$cart = [];
     	}
+        
         $quantity = $request->quantity;
         $items = Item::find($id);
 
@@ -68,7 +69,7 @@ class ItemController extends Controller
 
         } else {
             
-            Session::flash('message', "Item is out of stock");
+            // Session::flash('message', "Item is out of stock");
             return Redirect::back();
 
         }
