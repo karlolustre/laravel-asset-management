@@ -14,11 +14,11 @@ class DatabaseSeeder extends Seeder
         // $this->call(AdminSeeder::class);
         // $this->call(UsersSeeder::class);
         $this->call(UsersTableSeeder::class);
-        $this->call(RentalsTableSeeder::class);
+        $this->call(PasswordResetsTableSeeder::class);
         $this->call(CategoriesTableSeeder::class);
         $this->call(ItemsTableSeeder::class);
         $this->call(StatusesTableSeeder::class);
+        $this->call(RentalsTableSeeder::class);
         $this->call(ItemRentalTableSeeder::class);
-        $this->call(PasswordResetsTableSeeder::class);
     }
 }
